@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Fun3DU: Functionality understanding and segmentation in 3D scenes">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv='cache-control' content='no-cache'> 
+  <meta http-equiv='expires' content='0'> 
+  <meta http-equiv='pragma' content='no-cache'>
+  <title>Functionality understanding and segmentation in 3D scenes</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-3 publication-title">Fun3DU: Functionality understanding and segmentation in 3D scenes</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=UEhVxSUAAAAJ">Jaime Corsetti</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=EOU10lkAAAAJ">Francesco Giuliari</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a>Alice Fasoli</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=dT1N2IUAAAAJ">Davide Boscaini</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=BQ7li6AAAAAJ">Fabio Poiesi</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>TeV - Fondazione Bruno Kessler</span>
+              <span class="author-block"><sup>2</sup>University of Trento</span>
+              <p>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.16310" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/jcorsetti/fun3du" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              
+              <!-- <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-file-pdf"></i>
+                  </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/teaser.png" alt="Fun3DU teaser" />
+        <p></p>
+        <h2 class="subtitle has-text-centered" style="margin-top: 30px;">
+          <b>Fun3DU</b> is the first method designed for <b>functionality understanding and segmentation</b> in 3D scene. 
+          Given an <b>high-resolution 3D scene</b>, a set of RGBD views showing the scene and a description of an action to perform, <b>Fun3DU segments the functional object</b>(s) that can be <b>used to carry out the specific action</b>. 
+          Fun3DU relies on pre-train vision and language models, is <b>training-free</b> and does not require task-specific annotations.
+        </h2>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Paragraph below is for the video  -->
+  <!-- <section class="hero is-light is-small has-text-centered">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+          <p>
+            Understanding functionalities in 3D scenes involves interpreting natural language descriptions to locate functional interactive objects, such as handles and buttons, in a 3D environment. 
+            Functionality understanding is highly challenging, as it requires both world knowledge to interpret language and spatial perception to identify fine-grained objects.
+            We introduce Fun3DU, the first approach designed for functionality understanding in 3D scenes. 
+            Fun3DU uses a language model to parse the task description through Chain-of-Thought reasoning in order to identify the object of interest. 
+            The identified object is segmented across multiple views of the captured scene by using a vision and language model. 
+            The segmentation results from each view are lifted in 3D and aggregated into the point cloud using geometric information.
+            Fun3DU is training-free, relying entirely on pre-trained models.
+            We evaluate Fun3DU on SceneFun3D, the most recent and only dataset to benchmark this task, which comprises over 3000 task descriptions on 230 scenes. 
+            Our method significantly outperforms state-of-the-art open-vocabulary 3D segmentation approaches.          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- <hr>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Key Idea</h2>
+          <img src="" alt="IMG(?)" />
+          <div class="content has-text-justified">
+            <p>
+              Descrizione key idea
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr> -->
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <img src="./static/images/diagram.png" alt="Architecture of Fun3DU" />
+          <div class="content has-text-justified">
+            We design Fun3DU as a training-free method that leverages VLMs to comprehend task descriptions and segment functional objects, often not explicitly mentioned in the description.
+            Fun3DU is based on four key modules that process multiple views of a given scene and project the results in 3D.
+            The first module interprets the task description to explain the functionality and context through Chain-of-Thought reasoning. 
+            The second module locates contextual objects via open-vocabulary segmentation to improve accuracy and efficiency in masking the functional objects within each view.
+            Moreover, it employs of a novel visibility-based view selection approach to reduce the number of views from thousands to tens informative ones.
+            The third module segments the functional objects on this view subset using a 2D VLM.           
+            The fourth module performs multi-view agreement by lifting and aggregating the 2D masks into the 3D point cloud using point-to-pixel correspondences.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Qualitatives. -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Qualitative results on SceneFun3D</h2>
+            <img src="./static/images/qualit.png" alt="Qualitative results on SceneFun3D" />
+            <div class="content has-text-justified">
+              <p>
+                We evaluate Fun3DU on SceneFun3D [1], which comprises 230 scenes for a total of 3000 task descriptions.
+                We compare against state-of-the-art models for open-vocabulary 3D scene segmentation: OpenMask3D [2], LERF [3], and OpenIns3D [4].
+                Fun3DU is capable of obtaining accurate masks of the functional objects, while other methods are prone to segmenting whole objects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- related works. -->
+    <section class="section">
+      <div class="container is-max-desktop">
+            <h2 class="title is-4" id="references">Related work</h2>
+            <div class="content has-text-justified">
+              <p>
+                [1] Delitzas, Alexandros, et al. "Scenefun3D: Fine-grained functionality and affordance understanding in 3D scenes." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2024.
+              </p>
+              <p>
+                [2] Takmaz, Ayca, et al. "OpenMask3D: Open-Vocabulary 3D Instance Segmentation." Advances in Neural Information Processing Systems. 2024.
+              </p>
+              <p>
+                [3] Kerr, Justin, et al. "Lerf: Language embedded radiance fields." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2023.
+              </p>
+              <p>
+                [4] Huang, Zhening, et al. "Openins3D: Snap and lookup for 3d open-vocabulary instance segmentation." European Conference on Computer Vision. 2025.
+              </p>
+          </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Citation</h2>
+If you find Fun3DU useful for your work, please cite:
+<pre><code>@article{corsetti2024fun3du,
+  title={Functionality understanding and segmentation in 3D scenes},
+  author={Corsetti, Jaime and Giuliari, Francesco and Fasoli, Alice and Boscaini, Davide and Poiesi, Fabio},
+  journal={arXiv preprint arXiv:2411.16310},
+  year={2024}
+}</code></pre>
+      </div>
+    </section>  
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/pdf/2312.00690.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/jcorsetti/oryon-website" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+              The webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
