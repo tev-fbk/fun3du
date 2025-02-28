@@ -3,14 +3,17 @@ Official implementation and [website](https://jcorsetti.github.io/fun3du/) of Fu
 The technical report is available [on arxiv](https://arxiv.org/abs/2411.16310).
 Code will be released in the following months.
 
+## News
+- 27/02/25: Fun3DU has been accepted at CVPR25!
+
 ## Citing Fun3DU
 
 ```BibTeX
-@article{corsetti2024fun3du,
+@inproceedings{corsetti2025fun3du,
   title={Functionality understanding and segmentation in 3D scenes},
   author={Corsetti, Jaime and Giuliari, Francesco and Fasoli, Alice and Boscaini, Davide and Poiesi, Fabio},
-  journal={arXiv preprint arXiv:2411.16310},
-  year={2024}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
 }
 ```
 
