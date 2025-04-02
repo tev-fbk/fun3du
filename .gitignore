@@ -1,0 +1,10 @@
+**/__pycache__/**
+data/
+*.png
+*.txt
+*.sh
+viz/**
+exps
+ollama
+*.sh
+*.cfg

@@ -1,0 +1,22 @@
+exp_root : exps   # path to the folder with experiments
+exp_name : debug  # experiment name, folder in exp_root/
+device : cuda
+debug_viz: False
+
+dataset:
+  root : data/scenefun3d # root to scenefun3d dataset
+  split: val  # val or train
+  start:  # optional values, to set start and end of the visit splits.
+  end:
+
+frame_folder: frames # name of the frame folder inside the exp folder, where data about molmo masks is stored
+pcds_folder: pcds    # name of the pcd folder inside the exp folder, where data about final 3D masks is stored
+llm_type: llama      # name of file with LLM reasoning Chain-of-Thought data, e.g. data/scenefun3d/val/420673/420673_{LLM_TYPE}_cot.json
+mask_type: owl2_rsam # name of folder with contextual objs detection e.g. data/scenefun3d/val/420673/42445198/{MASK_TYPE}
+
+frame_sampling:
+  mode: score_mean   # samples frames according to the score
+  n: 50              # number of frames to sample
+
+molmo_prompt: original # default, synonims. Only influences molmo
+threshold: 0.7         # used in evaluation 
