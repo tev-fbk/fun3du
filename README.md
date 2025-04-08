@@ -3,7 +3,7 @@ Official implementation and [website](https://tev-fbk.github.io/fun3du/) of Fun3
 The technical report is available [on arxiv](https://arxiv.org/abs/2411.16310).
 
 ## News
-- 06/0/25: Fun3DU will be presented as highlight paper.
+- 06/04/25: Fun3DU will be presented as highlight paper.
 - 02/04/25: Code for Fun3DU has been released.
 - 27/02/25: Fun3DU has been accepted at CVPR25!
 
