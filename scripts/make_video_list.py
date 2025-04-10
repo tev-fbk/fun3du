@@ -2,7 +2,7 @@ import os
 import sys
 from os.path import join
 
-ROOT = 'new_data/scenefun3d/benchmark_file_lists'
+ROOT = 'data/scenefun3d/benchmark_file_lists'
 SPLIT = sys.argv[1] # train or val
 
 with open(join(ROOT,'train_val_set.csv')) as f:
