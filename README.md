@@ -9,7 +9,7 @@ The technical report is available [on arxiv](https://arxiv.org/abs/2411.16310).
 
 
 ## Dataset preparation
-NB: the split0 and split1 splits mentioned in the paper correspond to the train and validation split of SceneFun3D, respectively.
+NB: the split0 and split1 splits mentioned in the paper correspond to the validation and training split of SceneFun3D, respectively.
 
 1. Create dataset root folder `$ROOT` (the dataset scripts assume it to be `data/scenefun3d/`)
 2. Download the original [dataset folder](https://github.com/SceneFun3D/scenefun3d/tree/main/benchmark_file_lists) and put in the `$ROOT`.
